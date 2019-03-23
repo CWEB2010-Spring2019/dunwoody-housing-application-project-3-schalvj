@@ -13,27 +13,22 @@
         <Grid.RowDefinitions>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Image
-               HorizontalAlignment="Left"
-               Source="Logo_Final_White-web.png"
-               Width="250"
-               Height="60" Margin="30,10,10,30"/>
-        <TextBlock x:Name="HousingApplication" 
-                   HorizontalAlignment="Left" 
-                   Height="20" Width="250" 
-                   FontFamily="Century Gothic" 
-                   FontSize="15" 
-                   FontWeight="Medium" 
-                   Foreground="#fff" 
-                   TextAlignment="Center" 
-                   Margin="30,75,0,5">Housing Application</TextBlock>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="348,189,0,-114" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="200"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="348,235,0,-160" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="200"/>
-        <TextBlock HorizontalAlignment="Left" Margin="236,190,0,-110" FontWeight="Medium" Foreground="#fff" FontSize="15" TextWrapping="Wrap" Text="* Username: " VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="236,235,0,-155" FontWeight="Medium" Foreground="#fff" FontSize="15" TextWrapping="Wrap" Text="* Password: " VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Source="Logo_Final_White-web.png" Width="250" Height="60" Margin="30,10,10,30"/>
+        <TextBlock x:Name="HousingApplication" HorizontalAlignment="Left" Height="20" Width="250" FontFamily="Century Gothic" FontSize="15" FontWeight="Medium" Foreground="#fff" TextAlignment="Center" Margin="30,75,0,5">Housing Application</TextBlock>
+        
+        <Label HorizontalAlignment="Left" Margin="236,190,0,-130" FontWeight="Medium" Foreground="#fff" FontSize="15" Content="* Username: " VerticalAlignment="Top" Height="40"/>
+        <TextBox Name="txtUsername" HorizontalAlignment="Left" Height="25" Margin="348,189,0,-114" TextWrapping="Wrap" Tag="Username" VerticalAlignment="Top" Width="200"/>
+
+        <Label HorizontalAlignment="Left" Margin="236,235,0,-177" FontWeight="Medium" Foreground="#fff" FontSize="15" Content="* Password: " VerticalAlignment="Top" Height="42"/>
+        <TextBox Name="txtPassword" HorizontalAlignment="Left" Height="25" Margin="348,235,0,-160" TextWrapping="Wrap" Tag="Password" VerticalAlignment="Top" Width="200"/>
+
         <TextBlock HorizontalAlignment="Left" Margin="30,378,0,-298" FontWeight="Light" Foreground="#fff" FontSize="12" TextWrapping="Wrap" Text="*- Required" VerticalAlignment="Top"/>
-        <Button Content="Login" FontSize="15" HorizontalAlignment="Left" Height="25" Margin="468,281,0,-206" VerticalAlignment="Top" Width="80"/>
-        <Button Content="Exit" FontSize="15" HorizontalAlignment="Left" Height="25" Margin="676,378,0,-303" VerticalAlignment="Top" Width="80"/>
+        <Button Name="btnLogin" Click="BtnLogin_Click" Content="Login" FontSize="15" HorizontalAlignment="Left" Height="25" Margin="468,281,0,-206" VerticalAlignment="Top" Width="80"/>
+        
+        <Button Name="btnExit" Click="BtnExit_Click" Content="Exit" FontSize="15" HorizontalAlignment="Left" Height="25" Margin="676,378,0,-303" VerticalAlignment="Top" Width="80"/>
     </Grid>
+    <Window.Resources>
+        
+    </Window.Resources>
 </Window>
 
