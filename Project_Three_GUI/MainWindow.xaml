@@ -28,16 +28,127 @@
                    TextAlignment="Center" 
                    Margin="30,75,0,5">Housing Application</TextBlock>
         <TabControl HorizontalAlignment="Left" Height="295" Margin="30,110,0,-305" VerticalAlignment="Top" Width="736">
+            <TabItem Header="Add New" Width="100">
+                <Grid Background="#FFE5E5E5">
+
+                    <TextBlock HorizontalAlignment="Left" Margin="66,56,0,0" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.484,-1.208"/>
+                    <TextBox Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="165,56,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="66,95,0,0" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.484,-1.208"/>
+                    <TextBox Name="LastName" HorizontalAlignment="Left" Height="23" Margin="165,95,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="120"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="46,136,0,0" TextWrapping="Wrap" Text="Resident Type:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
+                    <ComboBox Name="ResidentType" HorizontalAlignment="Left" Margin="165,136,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem Name="Scholarship" Content="Scholarship Recipients" Selected="ComboBoxItem_Selected_2"/>
+                        <ComboBoxItem Name="Athlete" Content="Student Athletes" Selected="ComboBoxItem_Selected_1"/>
+                        <ComboBoxItem Name="Worker" Content="Student Workers" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="410,56,0,0" TextWrapping="Wrap" Text="Floor:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
+                    <ComboBox Name="Floor" HorizontalAlignment="Left" Margin="476,56,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem Name="First" Content="First Floor" Selected="ComboBoxItem_Selected_2"/>
+                        <ComboBoxItem Name="Second" Content="Second Floor" Selected="ComboBoxItem_Selected_1"/>
+                        <ComboBoxItem Name="Third" Content="Third Floor" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem Name="Fourth" Content="Forth Floor" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem Name="Fifth" Content="Fifth Floor" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem Name="Sixth" Content="Sixth Floor" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem Name="Seventh" Content="Seventh Floor" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem Name="Eighth" Content="Eighth Floor" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="365,95,0,0" TextWrapping="Wrap" Text="Dorm Room:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
+                    <ComboBox x:Name="DormRoomsFirst" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem x:Name="Rm101" Content="#101" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm102" Content="#102" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm103" Content="#103" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm104" Content="#104" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm105" Content="#105" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm106" Content="#106" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm107" Content="#107" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm108" Content="#108" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+                    <ComboBox x:Name="DormRoomsSecond" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem x:Name="Rm201" Content="#201" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm202" Content="#202" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm203" Content="#203" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm204" Content="#204" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm205" Content="#205" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm206" Content="#206" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm207" Content="#207" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm208" Content="#208" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+                    <ComboBox x:Name="DormRoomsThird" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem x:Name="Rm301" Content="#301" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm302" Content="#302" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm303" Content="#303" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm304" Content="#304" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm305" Content="#305" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm306" Content="#306" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm307" Content="#307" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm308" Content="#308" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+                    <ComboBox x:Name="DormRoomsFourth" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem x:Name="Rm401" Content="#401" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm402" Content="#402" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm403" Content="#403" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm404" Content="#404" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm405" Content="#405" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm406" Content="#406" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm407" Content="#407" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm408" Content="#408" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+                    <ComboBox x:Name="DormRoomsFifth" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem x:Name="Rm501" Content="#501" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm502" Content="#502" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm503" Content="#503" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm504" Content="#504" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm505" Content="#505" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm506" Content="#506" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm507" Content="#507" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm508" Content="#508" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+                    <ComboBox x:Name="DormRoomsSixth" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem x:Name="Rm601" Content="#601" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm602" Content="#602" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm603" Content="#603" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm604" Content="#604" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm605" Content="#605" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm606" Content="#606" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm607" Content="#607" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm608" Content="#608" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+                    <ComboBox x:Name="DormRoomsSeventh" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem x:Name="Rm701" Content="#701" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm702" Content="#702" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm703" Content="#703" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm704" Content="#704" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm705" Content="#705" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm706" Content="#706" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm707" Content="#707" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm708" Content="#708" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+                    <ComboBox x:Name="DormRoomsEighth" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem x:Name="Rm801" Content="#801" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm802" Content="#802" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm803" Content="#803" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm804" Content="#804" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm805" Content="#805" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm806" Content="#806" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm807" Content="#807" Selected="ComboBoxItem_Selected"/>
+                        <ComboBoxItem x:Name="Rm808" Content="#808" Selected="ComboBoxItem_Selected"/>
+                    </ComboBox>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="354,136,0,0" TextWrapping="Wrap" Text="Hours Worked:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.1, 1"/>
+                    <TextBox Name="HoursWorked" HorizontalAlignment="Left" Height="23" Margin="476,136,0,0" TextWrapping="Wrap" Text="# of hours" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Search" Width="100">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
             <TabItem Header="View All" Width="100">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid Height="200" Margin="40,30,40,0" VerticalAlignment="Top"/>
                 </Grid>
-            </TabItem>
-            <TabItem Header="Add New" Width="100">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-            <TabItem Header="Search" Width="100">
-                <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
     </Grid>

@@ -24,5 +24,30 @@ namespace Project_Three_GUI
         {
             InitializeComponent();
         }
+
+       
+
+        // RD selects Student Workers
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            // Scholarship Recipients may only reside on floors 1 thru 3.
+
+            // Scholarship Recipients pay ($1245 - 0.5 * monthlyPay) for a boarding fee.
+            // monthlyPay = $14.00 * hoursWorked
+        }
+        // RD selects Student Athletes
+        private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+            // Scholarship Recipients may only reside on floors 4 thru 6.
+
+            // Scholarship Recipients pay a flat boarding fee of $1200 monthly.
+        }
+        // RD selects Scholarship Recipients 
+        private void ComboBoxItem_Selected_2(object sender, RoutedEventArgs e)
+        {
+            // Scholarship Recipients may only reside on floors 7 and 8.
+
+            // Scholarship Recipients pay a flat boarding fee of $100 monthly.
+        }
     }
 }
