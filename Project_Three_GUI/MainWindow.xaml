@@ -5,188 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_Three_GUI"
         mc:Ignorable="d"
-        Title="" Height="450" Width="800" FontSize="14" Background="Gray">
+        Title="" Height="472.236" Width="845.53" FontSize="14" Background="Gray">
     <Grid Name="Header" Width="auto" Height="100" VerticalAlignment="Top" Background="#ac182e">
-
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="83*" />
-            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Image HorizontalAlignment="Left" Source="Logo_Final_White-web.png" Width="250" Height="60" Margin="30,10,0,30"/>
-        <Label Name="Dashboard" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="HousingApplication" 
-                   HorizontalAlignment="Left" 
-                   Height="20" Width="250" 
-                   FontFamily="Century Gothic" 
-                   FontSize="15" 
-                   FontWeight="Medium" 
-                   Foreground="#fff" 
-                   TextAlignment="Center" 
-                   Margin="30,75,0,5">Housing Application</TextBlock>
-        <TabControl HorizontalAlignment="Left" Height="295" Margin="30,110,0,-305" VerticalAlignment="Top" Width="736" Grid.ColumnSpan="2">
-            <TabItem Header="Add New" Width="100">
-                <Grid Background="#FFE5E5E5">
-
-                    <TextBlock HorizontalAlignment="Left" Margin="66,56,0,0" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.484,-1.208"/>
-                    <TextBox Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="165,56,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="153"/>
-
-                    <TextBlock HorizontalAlignment="Left" Margin="66,95,0,0" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.484,-1.208"/>
-                    <TextBox Name="LastName" HorizontalAlignment="Left" Height="23" Margin="165,95,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="153"/>
-
-                    <TextBlock HorizontalAlignment="Left" Margin="46,136,0,0" TextWrapping="Wrap" Text="Resident Type:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
-                    <ComboBox Name="ResidentType" HorizontalAlignment="Left" Margin="165,136,0,0" VerticalAlignment="Top" Width="153">
-                        <ComboBoxItem Name="Scholarship" Content="Scholarship Recipient" Selected="Scholarship_Selected"/>
-                        <ComboBoxItem Name="Athlete" Content="Student Athlete" Selected="Athlete_Selected"/>
-                        <ComboBoxItem Name="Worker" Content="Student Worker" Selected="Worker_Selected"/>
-                    </ComboBox>
-
-                    <TextBlock HorizontalAlignment="Left" Margin="410,56,0,0" TextWrapping="Wrap" Text="Floor:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
-                    <ComboBox Name="Floor" HorizontalAlignment="Left" Margin="476,56,0,0" VerticalAlignment="Top" Width="142">
-                        <ComboBoxItem Name="First" Content="First Floor" Selected="First_Selected"/>
-                        <ComboBoxItem Name="Second" Content="Second Floor" Selected="Second_Selected"/>
-                        <ComboBoxItem Name="Third" Content="Third Floor" Selected="Third_Selected"/>
-                        <ComboBoxItem Name="Fourth" Content="Forth Floor" Selected="Fourth_Selected"/>
-                        <ComboBoxItem Name="Fifth" Content="Fifth Floor" Selected="Fifth_Selected"/>
-                        <ComboBoxItem Name="Sixth" Content="Sixth Floor" Selected="Sixth_Selected"/>
-                        <ComboBoxItem Name="Seventh" Content="Seventh Floor" Selected="Seventh_Selected"/>
-                        <ComboBoxItem Name="Eighth" Content="Eighth Floor" Selected="Eighth_Selected"/>
-                    </ComboBox>
-
-                    <TextBlock HorizontalAlignment="Left" Margin="365,95,0,0" TextWrapping="Wrap" Text="Dorm Room:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
-                    <ComboBox x:Name="DormRoomsFirst" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120">
-                        <ComboBoxItem x:Name="Rm101" Content="#101" Selected="Rm101_Selected"/>
-                        <ComboBoxItem x:Name="Rm102" Content="#102" Selected="Rm102_Selected"/>
-                        <ComboBoxItem x:Name="Rm103" Content="#103" Selected="Rm103_Selected"/>
-                        <ComboBoxItem x:Name="Rm104" Content="#104" Selected="Rm104_Selected"/>
-                        <ComboBoxItem x:Name="Rm105" Content="#105" Selected="Rm105_Selected"/>
-                        <ComboBoxItem x:Name="Rm106" Content="#106" Selected="Rm106_Selected"/>
-                        <ComboBoxItem x:Name="Rm107" Content="#107" Selected="Rm107_Selected"/>
-                        <ComboBoxItem x:Name="Rm108" Content="#108" Selected="Rm108_Selected"/>
-                    </ComboBox>
-                    <ComboBox x:Name="DormRoomsSecond" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120">
-                        <ComboBoxItem x:Name="Rm201" Content="#201" Selected="Rm201_Selected"/>
-                        <ComboBoxItem x:Name="Rm202" Content="#202" Selected="Rm202_Selected"/>
-                        <ComboBoxItem x:Name="Rm203" Content="#203" Selected="Rm203_Selected"/>
-                        <ComboBoxItem x:Name="Rm204" Content="#204" Selected="Rm204_Selected"/>
-                        <ComboBoxItem x:Name="Rm205" Content="#205" Selected="Rm205_Selected"/>
-                        <ComboBoxItem x:Name="Rm206" Content="#206" Selected="Rm206_Selected"/>
-                        <ComboBoxItem x:Name="Rm207" Content="#207" Selected="Rm207_Selected"/>
-                        <ComboBoxItem x:Name="Rm208" Content="#208" Selected="Rm208_Selected"/>
-                    </ComboBox>
-                    <ComboBox x:Name="DormRoomsThird" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120">
-                        <ComboBoxItem x:Name="Rm301" Content="#301" Selected="Rm301_Selected"/>
-                        <ComboBoxItem x:Name="Rm302" Content="#302" Selected="Rm302_Selected"/>
-                        <ComboBoxItem x:Name="Rm303" Content="#303" Selected="Rm303_Selected"/>
-                        <ComboBoxItem x:Name="Rm304" Content="#304" Selected="Rm304_Selected"/>
-                        <ComboBoxItem x:Name="Rm305" Content="#305" Selected="Rm305_Selected"/>
-                        <ComboBoxItem x:Name="Rm306" Content="#306" Selected="Rm306_Selected"/>
-                        <ComboBoxItem x:Name="Rm307" Content="#307" Selected="Rm307_Selected"/>
-                        <ComboBoxItem x:Name="Rm308" Content="#308" Selected="Rm308_Selected"/>
-                    </ComboBox>
-                    <ComboBox x:Name="DormRoomsFourth" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120">
-                        <ComboBoxItem x:Name="Rm401" Content="#401" Selected="Rm401_Selected"/>
-                        <ComboBoxItem x:Name="Rm402" Content="#402" Selected="Rm402_Selected"/>
-                        <ComboBoxItem x:Name="Rm403" Content="#403" Selected="Rm403_Selected"/>
-                        <ComboBoxItem x:Name="Rm404" Content="#404" Selected="Rm404_Selected"/>
-                        <ComboBoxItem x:Name="Rm405" Content="#405" Selected="Rm405_Selected"/>
-                        <ComboBoxItem x:Name="Rm406" Content="#406" Selected="Rm406_Selected"/>
-                        <ComboBoxItem x:Name="Rm407" Content="#407" Selected="Rm407_Selected"/>
-                        <ComboBoxItem x:Name="Rm408" Content="#408" Selected="Rm408_Selected"/>
-                    </ComboBox>
-                    <ComboBox x:Name="DormRoomsFifth" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120">
-                        <ComboBoxItem x:Name="Rm501" Content="#501" Selected="Rm501_Selected"/>
-                        <ComboBoxItem x:Name="Rm502" Content="#502" Selected="Rm502_Selected"/>
-                        <ComboBoxItem x:Name="Rm503" Content="#503" Selected="Rm503_Selected"/>
-                        <ComboBoxItem x:Name="Rm504" Content="#504" Selected="Rm504_Selected"/>
-                        <ComboBoxItem x:Name="Rm505" Content="#505" Selected="Rm505_Selected"/>
-                        <ComboBoxItem x:Name="Rm506" Content="#506" Selected="Rm506_Selected"/>
-                        <ComboBoxItem x:Name="Rm507" Content="#507" Selected="Rm507_Selected"/>
-                        <ComboBoxItem x:Name="Rm508" Content="#508" Selected="Rm508_Selected"/>
-                    </ComboBox>
-                    <ComboBox x:Name="DormRoomsSixth" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120">
-                        <ComboBoxItem x:Name="Rm601" Content="#601" Selected="Rm601_Selected"/>
-                        <ComboBoxItem x:Name="Rm602" Content="#602" Selected="Rm602_Selected"/>
-                        <ComboBoxItem x:Name="Rm603" Content="#603" Selected="Rm603_Selected"/>
-                        <ComboBoxItem x:Name="Rm604" Content="#604" Selected="Rm604_Selected"/>
-                        <ComboBoxItem x:Name="Rm605" Content="#605" Selected="Rm605_Selected"/>
-                        <ComboBoxItem x:Name="Rm606" Content="#606" Selected="Rm606_Selected"/>
-                        <ComboBoxItem x:Name="Rm607" Content="#607" Selected="Rm607_Selected"/>
-                        <ComboBoxItem x:Name="Rm608" Content="#608" Selected="Rm608_Selected"/>
-                    </ComboBox>
-                    <ComboBox x:Name="DormRoomsSeventh" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="120">
-                        <ComboBoxItem x:Name="Rm701" Content="#701" Selected="Rm701_Selected"/>
-                        <ComboBoxItem x:Name="Rm702" Content="#702" Selected="Rm702_Selected"/>
-                        <ComboBoxItem x:Name="Rm703" Content="#703" Selected="Rm703_Selected"/>
-                        <ComboBoxItem x:Name="Rm704" Content="#704" Selected="Rm704_Selected"/>
-                        <ComboBoxItem x:Name="Rm705" Content="#705" Selected="Rm705_Selected"/>
-                        <ComboBoxItem x:Name="Rm706" Content="#706" Selected="Rm706_Selected"/>
-                        <ComboBoxItem x:Name="Rm707" Content="#707" Selected="Rm707_Selected"/>
-                        <ComboBoxItem x:Name="Rm708" Content="#708" Selected="Rm708_Selected"/>
-                    </ComboBox>
-                    <ComboBox x:Name="DormRoomsEighth" HorizontalAlignment="Left" Margin="476,95,0,0" VerticalAlignment="Top" Width="142">
-                        <ComboBoxItem x:Name="Rm801" Content="#801" Selected="Rm801_Selected"/>
-                        <ComboBoxItem x:Name="Rm802" Content="#802" Selected="Rm802_Selected"/>
-                        <ComboBoxItem x:Name="Rm803" Content="#803" Selected="Rm803_Selected"/>
-                        <ComboBoxItem x:Name="Rm804" Content="#804" Selected="Rm804_Selected"/>
-                        <ComboBoxItem x:Name="Rm805" Content="#805" Selected="Rm805_Selected"/>
-                        <ComboBoxItem x:Name="Rm806" Content="#806" Selected="Rm806_Selected"/>
-                        <ComboBoxItem x:Name="Rm807" Content="#807" Selected="Rm807_Selected"/>
-                        <ComboBoxItem x:Name="Rm808" Content="#808" Selected="Rm808_Selected"/>
-                    </ComboBox>
-
-                    <TextBlock HorizontalAlignment="Left" Margin="354,136,0,0" TextWrapping="Wrap" Text="Hours Worked:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.1, 1"/>
-                    <TextBox Name="HoursWorked" PreviewTextInput="HoursWorked_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="476,136,0,0" TextWrapping="Wrap" Text="# of hours" VerticalAlignment="Top" Width="142"/>
-
-                    <TextBlock HorizontalAlignment="Left" Margin="354,217,0,0" TextWrapping="Wrap" Text="Boarding Fee:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.1, 1"/>
-                    <Label Content="" HorizontalAlignment="Left" Margin="476,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.094,0.2" Width="120" >
-
-                    </Label>
-                    <Button Name="btnAdd" Click="BtnAdd_Click" Content="Add" FontSize="15" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="80" Margin="622,223,0,0"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Search" Width="100">
-                <Grid Background="#FFE5E5E5">
-                    <ComboBox x:Name="Floor_Copy" HorizontalAlignment="Left" Margin="172,74,0,0" VerticalAlignment="Top" Width="142">
-                        <ComboBoxItem x:Name="First1" Content="First Floor" Selected="First_Selected"/>
-                        <ComboBoxItem x:Name="Second1" Content="Second Floor" Selected="Second_Selected"/>
-                        <ComboBoxItem x:Name="Third1" Content="Third Floor" Selected="Third_Selected"/>
-                        <ComboBoxItem x:Name="Fourth1" Content="Forth Floor" Selected="Fourth_Selected"/>
-                        <ComboBoxItem x:Name="Fifth1" Content="Fifth Floor" Selected="Fifth_Selected"/>
-                        <ComboBoxItem x:Name="Sixth1" Content="Sixth Floor" Selected="Sixth_Selected"/>
-                        <ComboBoxItem x:Name="Seventh1" Content="Seventh Floor" Selected="Seventh_Selected"/>
-                        <ComboBoxItem x:Name="Eighth1" Content="Eighth Floor" Selected="Eighth_Selected"/>
-                    </ComboBox>
-                    <TextBlock HorizontalAlignment="Left" Margin="46,80,0,0" TextWrapping="Wrap" Text="Floor:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
-                    <ComboBox x:Name="DormRoomsEighth_Copy" HorizontalAlignment="Left" Margin="172,115,0,0" VerticalAlignment="Top" Width="142">
-                        <ComboBoxItem x:Name="Rm1" Content="#801" Selected="Rm801_Selected"/>
-                        <ComboBoxItem x:Name="Rm2" Content="#802" Selected="Rm802_Selected"/>
-                        <ComboBoxItem x:Name="Rm3" Content="#803" Selected="Rm803_Selected"/>
-                        <ComboBoxItem x:Name="Rm4" Content="#804" Selected="Rm804_Selected"/>
-                        <ComboBoxItem x:Name="Rm5" Content="#805" Selected="Rm805_Selected"/>
-                        <ComboBoxItem x:Name="Rm6" Content="#806" Selected="Rm806_Selected"/>
-                        <ComboBoxItem x:Name="Rm7" Content="#807" Selected="Rm807_Selected"/>
-                        <ComboBoxItem x:Name="Rm8" Content="#808" Selected="Rm808_Selected"/>
-                    </ComboBox>
-                    <TextBlock HorizontalAlignment="Left" Margin="46,121,0,0" TextWrapping="Wrap" Text="Dorm Room:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="46,162,0,0" TextWrapping="Wrap" Text="Resident Type:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
-                    <ComboBox x:Name="ResidentType_Copy" HorizontalAlignment="Left" Margin="172,156,0,0" VerticalAlignment="Top" Width="153">
-                        <ComboBoxItem x:Name="Scholarship1" Content="Scholarship Recipient" Selected="Scholarship_Selected"/>
-                        <ComboBoxItem x:Name="Athlete1" Content="Student Athlete" Selected="Athlete_Selected"/>
-                        <ComboBoxItem x:Name="Worker1" Content="Student Worker" Selected="Worker_Selected"/>
-                    </ComboBox>
-                    <TextBlock HorizontalAlignment="Left" Margin="46,41,0,0" TextWrapping="Wrap" Text="Resident ID:" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.484,-1.208"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="172,37,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142"/>
-                    <DataGrid HorizontalAlignment="Left" Height="188" Margin="409,37,0,0" VerticalAlignment="Top" Width="271"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="View All" Width="100">
-                <Grid Background="#FFE5E5E5">
-                    <DataGrid Name="dataGridViewAll" Height="200" Margin="40,30,40,0" VerticalAlignment="Top" />
-                </Grid>
-            </TabItem>
-        </TabControl>
+        <Image HorizontalAlignment="Left" Source="Logo_Final_White-web.png" Width="250" Height="60" Margin="30,10,10,30" />
+        <Label Name="Dashboard"/>
+        <TextBlock x:Name="HousingApplication" HorizontalAlignment="Left" Height="20" Width="250" FontFamily="CenturyGothic" FontSize="15" FontWeight="Medium" Foreground="#fff" TextAlignment="Center" Margin="30,75,0,5">Housing Application</TextBlock>
+        <StackPanel Name="btnPan" HorizontalAlignment="Right" Height="290" Width="200" Margin="0,110,37.6,-300" VerticalAlignment="Top">
+            <Button Name="btnAddNew" Content="Add New Resident" FontSize="15" FontWeight="Medium" HorizontalAlignment="Center" Height="40" Width="155" Margin="20" Click="BtnAddNew_Click" />
+            <Button Name="btnSearch" Click="BtnSearch_Click" Content="Search Residents" FontSize="15" FontWeight="Medium" HorizontalAlignment="Center" Height="40" Width="155" Margin="20" />
+            <Button x:Name="btnExit" Click="BtnExit_Click" Content="Exit" FontSize="15" FontWeight="Medium" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="35" Width="75" Margin="0,20,20,20"/>
+        </StackPanel>
+        <StackPanel Name="warningMsg" HorizontalAlignment="Left" Margin="75,100,0,-300"  VerticalAlignment="Top" Height="300" Width="430">
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,25,0,-20" 
+                       Foreground="Black" FontSize="15" FontWeight="Medium" FontFamily="CenturyGothic" 
+                       TextWrapping="Wrap" Width="379" Height="20" TextAlignment="Center">
+                <Bold>********************* WARNING *********************</Bold>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,-10" Foreground="Black" FontSize="15" FontWeight="Medium" FontFamily="CenturyGothic" TextWrapping="Wrap" TextAlignment="Left" Width="379" Height="175">
+                This computer system is the property of Dunwoody College of Technology. 
+                It is for authorized use only. 
+                By using this system, all users acknowledge notice of, and agree to comply with, the College’s Acceptable Use of Information Technology Resources Policy.
+                Unauthorized or improper use of this system may result in administrative disciplinary action, civil charges/criminal penalties, and/or other sanctions. 
+                By continuing to use this system you indicate your awareness of and consent to these terms and conditions of use.*
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="25,25,0,-20" 
+                       Foreground="Black" FontSize="15" FontWeight="Medium" FontFamily="CenturyGothic" 
+                       TextWrapping="Wrap" Width="379" Height="63" TextAlignment="Center">
+                <Bold>**LOG OFF IMMEDIATELY**</Bold>
+                <LineBreak/>
+                If you do not agree to the conditions stated in this warning.
+            </TextBlock>
+        </StackPanel>
     </Grid>
 </Window>

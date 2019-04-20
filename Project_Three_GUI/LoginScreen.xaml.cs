@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -27,16 +28,19 @@ namespace Project_Three_GUI
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection(@"Data Source=CND82594LB;Initial Catalog=LoginDB;Integrated Security=True;");
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conLogin"].ConnectionString);
+
             try
             {
-                if (sqlCon.State == System.Data.ConnectionState.Closed)
-                    sqlCon.Open();
-                String query = "SELECT COUNT(1) FROM tblUser WHERE Username=@Username AND Password=@Password";
-                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                sqlCmd.CommandType = System.Data.CommandType.Text;
+                if (conn.State == System.Data.ConnectionState.Closed)
+                    conn.Open();
+                string query = "SELECT COUNT(1) FROM tblUser WHERE Username=@Username AND Password=@Password";
+                SqlCommand sqlCmd = new SqlCommand(query, conn)
+                {
+                    CommandType = System.Data.CommandType.Text
+                };
                 sqlCmd.Parameters.AddWithValue("@Username",txtUsername.Text);
-                sqlCmd.Parameters.AddWithValue("@Password",txtPassword.Text);
+                sqlCmd.Parameters.AddWithValue("@Password",txtPassword.Password);
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
                 {
@@ -55,13 +59,13 @@ namespace Project_Three_GUI
             }
             finally
             {
-                sqlCon.Close();
+                conn.Close();
             }
         }
 
         private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }

@@ -1,0 +1,56 @@
+﻿<Window x:Class="Project_Three_GUI.AddNew"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Three_GUI"
+        mc:Ignorable="d"
+        Title="Add New Resident" Height="450" Width="800" Background="Gray">
+    <Grid Name="Header" Width="auto" Height="100" VerticalAlignment="Top" Background="#ac182e">
+        
+        <Image HorizontalAlignment="Left" Source="Logo_Final_White-web.png" Width="250" Height="60" Margin="30,10,10,30" />
+        <Label Name="Add"/>
+        <TextBlock x:Name="HousingApplication" HorizontalAlignment="Left" Height="20" Width="250" FontFamily="CenturyGothic" 
+                   FontSize="15" FontWeight="Medium" Foreground="#fff" TextAlignment="Center" Margin="30,75,0,5">
+            Housing Application
+        </TextBlock>
+
+        <StackPanel Height="235" Margin="30,110,30,-250">
+            <Grid Height="248" Margin="0,0,-0.4,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="355"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="355"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Left" Margin="66,56,0,0" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Width="90" FontSize="15" FontWeight="Medium" Height="20"/>
+                <TextBox Grid.Column="0" Name="FirstName" HorizontalAlignment="Left" Height="20" Margin="165,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" TextChanged="FirstName_TextChanged"/>
+
+                <TextBlock Grid.Column="0" HorizontalAlignment="Left" Margin="66,95,0,0" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Width="90" FontSize="15" FontWeight="Medium" Height="20"/>
+                <TextBox Grid.Column="0" Name="LastName" HorizontalAlignment="Left" Height="20" Margin="165,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" TextChanged="LastName_TextChanged"/>
+
+                <TextBlock Grid.Column="0" HorizontalAlignment="Left" Margin="46,136,0,0" TextWrapping="Wrap" Text="Resident Type:" VerticalAlignment="Top" Width="100" FontSize="15" FontWeight="Medium" Height="20" />
+                <ComboBox Grid.Column="0" Name="ResidentTypeName" HorizontalAlignment="Left" Margin="165,136,0,89" Height="20" Width="153" SelectionChanged="ResidentTypeName_SelectionChanged">
+                </ComboBox>
+
+                <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="73,56,0,0" TextWrapping="Wrap" Text="Floor:" VerticalAlignment="Top" Width="80" FontSize="15" FontWeight="Medium" Height="20" />
+                <ComboBox Grid.Column="2" Name="FloorID" HorizontalAlignment="Left" Margin="128,56,0,0" VerticalAlignment="Top" Height="20" Width="100" SelectionChanged="FloorID_SelectionChanged">
+                </ComboBox>
+
+                <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="28,95,0,0" TextWrapping="Wrap" Text="Dorm Room:" VerticalAlignment="Top" Width="95" FontSize="15" FontWeight="Medium" Height="20" />
+                <ComboBox Grid.Column="2" Name="DormID" HorizontalAlignment="Left" Margin="128,95,0,0" VerticalAlignment="Top" Width="100" Height="20" SelectionChanged="DormID_SelectionChanged">
+                </ComboBox>
+
+                <TextBlock Grid.Column="2" Name="HoursWorkedLab" HorizontalAlignment="Left" Margin="13,136,0,0" TextWrapping="Wrap" Text="Hours Worked:" VerticalAlignment="Top" Width="110" FontSize="15" FontWeight="Medium" Height="20" />
+                <TextBox Grid.Column="2" Name="HoursWorked" HorizontalAlignment="Left" Height="20" Margin="128,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" TextChanged="HoursWorked_TextChanged"/>
+
+                <TextBlock Name="MonthlyRent" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Monthly Rent:" VerticalAlignment="Top" Width="110" FontSize="15" FontWeight="Medium" Height="20" Grid.Column="2" Margin="13.2,181,0,0" />
+                <TextBlock Name="TotalRent" Text="" Grid.Column="2" HorizontalAlignment="Center" Height="35" Margin="156.2,176,99,0" VerticalAlignment="Top" Width="100" FontSize="15" FontWeight="Bold" />
+            </Grid>
+        </StackPanel>
+        <WrapPanel Name="btnPan" HorizontalAlignment="Right" Height="76" Width="377" Margin="0,345,200,-300" VerticalAlignment="Top">
+            <Button Name="btnAdd" Click="BtnAdd_Click" Content="Add" FontSize="15" FontWeight="Medium" HorizontalAlignment="Center" Height="40" Width="75" Margin="20" />
+            <Button Name="btnGoBack" Click="BtnGoBack_Click" Content="Go Back" FontSize="15" FontWeight="Medium" HorizontalAlignment="Center" Height="40" Width="75" Margin="20" />
+            <Button Name="btnExit" Click="BtnExit_Click" Content="Exit" FontSize="15" FontWeight="Medium" HorizontalAlignment="Center" Height="35" Width="75" Margin="20" />
+        </WrapPanel>
+    </Grid>
+</Window>
