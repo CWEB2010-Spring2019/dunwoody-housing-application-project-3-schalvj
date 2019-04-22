@@ -46,7 +46,7 @@
                 </WrapPanel>
             </StackPanel>
         </Grid>
-        <DataGrid Name="dataGridSearch" HorizontalAlignment="Center" VerticalAlignment="Top" AutoGenerateColumns="False"  Height="370" Width="600"  Margin="338,138,-638,-398" SelectionChanged="DataGridSearch_SelectionChanged_1" >
+        <DataGrid Name="dataGridSearch" HorizontalAlignment="Center" VerticalAlignment="Top" AutoGenerateColumns="False"  Height="370" Width="600"  Margin="338,138,-638,-398">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridRow}">
                     <Setter Property="Background" Value="#FF575757" />
@@ -74,7 +74,7 @@
         <WrapPanel Name="btnPan" HorizontalAlignment="Center" VerticalAlignment="Top" Height="84" Width="515" Grid.Column="1" Grid.Row="3" >
             <Button Name="btnViewAll" Click="BtnViewAll_Click" Content="View All" FontSize="15" FontWeight="Medium" Height="40" Width="75" Margin="20" />
             <Button Name="btnGoBack" Click="BtnGoBack_Click" Content="Go Back" FontSize="15" FontWeight="Medium" Height="40" Width="75" Margin="20" />
-            <Button Name="btnDelete" Content="Delete" FontSize="15" FontWeight="Medium" Height="40" Width="75" Margin="20" Click="BtnDelete_Click" />
+            <!--<Button Name="btnDelete" Content="Delete" FontSize="15" FontWeight="Medium" Height="40" Width="75" Margin="20" Click="BtnDelete_Click" />-->
             <Button Name="btnExit" Click="BtnExit_Click" Content="Exit" FontSize="15" FontWeight="Medium" Height="40" Width="75" Margin="20" />
         </WrapPanel>
     </Grid>
